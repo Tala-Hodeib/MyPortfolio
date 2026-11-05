@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tala Hodeib — Senior UI/UX Designer & Mobile Engineer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            surface: '#0B0C10',
+            card: '#12141C',
+            border: '#222634',
+            accent: '#6366F1',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background-color: #0B0C10; color: #F3F4F6; }
+    .bento-card {
+      background: linear-gradient(180deg, rgba(25, 28, 40, 0.7) 0%, rgba(18, 20, 28, 0.9) 100%);
+      border: 1px solid #222634;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .bento-card:hover {
+      border-color: #4F46E5;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px -10px rgba(79, 70, 229, 0.2);
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-indigo-500 selection:text-white">
+
+  <!-- Sticky Navigation -->
+  <header id="top" class="sticky top-0 z-50 backdrop-blur-md bg-[#0B0C10]/80 border-b border-border">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="#top" class="font-bold text-lg tracking-tight flex items-center gap-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+        Tala Hodeib
+      </a>
+      <nav class="flex items-center gap-6 md:gap-8 text-sm text-gray-400 font-medium">
+        <!-- First: Projects Dropdown -->
+        <div class="relative" id="projects-dropdown">
+          <button
+            type="button"
+            id="projects-menu-btn"
+            aria-expanded="false"
+            aria-haspopup="true"
+            class="flex items-center gap-1.5 hover:text-white transition focus:outline-none py-2"
+          >
+            <span>Projects</span>
+            <svg id="projects-chevron" class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div
+            id="projects-menu"
+            class="hidden absolute left-0 mt-2 w-48 rounded-2xl bg-[#12141C] border border-border shadow-xl shadow-black/60 py-2 z-50"
+          >
+            <a href="#work" class="projects-dropdown-link block px-4 py-2.5 text-sm text-gray-300 hover:text-white hover:bg-white/5 transition">Case Studies</a>
+            <a href="#systems" class="projects-dropdown-link block px-4 py-2.5 text-sm text-gray-300 hover:text-white hover:bg-white/5 transition">Design Systems</a>
+            <a href="#process" class="projects-dropdown-link block px-4 py-2.5 text-sm text-gray-300 hover:text-white hover:bg-white/5 transition">UX Architecture</a>
+          </div>
+        </div>
+
+        <!-- Second: Resume Button -->
+        <a href="#resume" class="hover:text-white transition">Resume</a>
+
+        <!-- Third: About Button -->
+        <a href="#about" class="hover:text-white transition">About</a>
+
+        <!-- Fourth: Keep Get in Touch Button -->
+        <a href="#contact" class="px-4 py-2 rounded-lg bg-white text-black font-semibold hover:bg-gray-200 transition">Get in Touch</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-6 pt-16 pb-28">
+
+    <!-- 1. HERO & POSITIONING (BENTO LAYOUT) -->
+    <section id="about" class="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-28">
+      
+      <!-- Left Main Value Prop -->
+      <div class="lg:col-span-7 bento-card rounded-3xl p-8 md:p-12 flex flex-col justify-between">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-300 text-xs font-mono uppercase tracking-wider mb-6">
+            UI/UX Designer &bull; React Native Engineer
+          </div>
+          <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight leading-[1.12] mb-6">
+            Designing intuitive web &amp; mobile products backed by <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-300">production-ready code.</span>
+          </h1>
+          <p class="text-gray-400 text-lg leading-relaxed mb-8 max-w-xl">
+            I bridge the gap between user research, scalable Figma design systems, and frontend execution—eliminating developer handoff friction and shipping high-converting experiences.
+          </p>
+        </div>
+
+        <div>
+          <!-- Differentiator Pills -->
+          <div class="flex flex-wrap gap-2.5 mb-8">
+            <span class="px-3.5 py-1.5 rounded-lg bg-white/5 border border-white/10 text-xs font-medium text-gray-300">End-to-End UX Research to UI</span>
+            <span class="px-3.5 py-1.5 rounded-lg bg-white/5 border border-white/10 text-xs font-medium text-gray-300">Figma Tokens &amp; Auto-Layout</span>
+            <span class="px-3.5 py-1.5 rounded-lg bg-white/5 border border-white/10 text-xs font-medium text-gray-300">React Native &amp; REST APIs</span>
+            <span class="px-3.5 py-1.5 rounded-lg bg-white/5 border border-white/10 text-xs font-medium text-gray-300">WCAG AA Accessibility</span>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-4">
+            <a href="#work" class="px-6 py-3.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-sm transition shadow-lg shadow-indigo-600/25">
+              Explore Selected Work &darr;
+            </a>
+            <a id="resume" href="#contact" class="px-6 py-3.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white font-semibold text-sm transition">
+              Book a Chat / Resume
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Bento Visual Proof -->
+      <div class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6">
+        
+        <!-- Impact Metrics Card -->
+        <div class="bento-card rounded-3xl p-7 flex flex-col justify-between">
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-xs font-mono uppercase tracking-wider text-gray-400">Measured Design Impact</span>
+            <span class="text-xs text-emerald-400 font-mono">Verified KPIs</span>
+          </div>
+          <div class="grid grid-cols-2 gap-4 my-2">
+            <div class="p-4 rounded-2xl bg-black/40 border border-white/5">
+              <div class="text-3xl font-extrabold text-emerald-400">-35%</div>
+              <div class="text-xs text-gray-400 mt-1">Dev Handoff Rework via Figma Tokens</div>
+            </div>
+            <div class="p-4 rounded-2xl bg-black/40 border border-white/5">
+              <div class="text-3xl font-extrabold text-indigo-400">+42%</div>
+              <div class="text-xs text-gray-400 mt-1">Task Completion in Usability Tests</div>
+            </div>
+          </div>
+          <p class="text-xs text-gray-500 mt-3">
+            Combining Computer Science engineering constraints with human-centered design methodologies.
+          </p>
+        </div>
+
+        <!-- Live Code + Design Token Card -->
+        <div class="bento-card rounded-3xl p-7 relative overflow-hidden">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-mono uppercase tracking-wider text-gray-400">Figma &rarr; React Native Sync</span>
+            <span class="px-2 py-0.5 text-[10px] font-mono bg-indigo-500/20 text-indigo-300 rounded">tokens.json</span>
+          </div>
+          <pre class="text-xs font-mono text-gray-300 bg-black/60 p-4 rounded-xl border border-white/5 overflow-x-auto leading-relaxed"><code><span class="text-indigo-400">const</span> ButtonPrimary = {
+  backgroundColor: tokens.color.<span class="text-emerald-400">brand500</span>,
+  paddingVertical: tokens.space.<span class="text-amber-300">md</span>, <span class="text-gray-500">// 12px</span>
+  borderRadius: tokens.radius.<span class="text-amber-300">lg</span>,   <span class="text-gray-500">// 14px</span>
+  minHeight: <span class="text-cyan-300">48</span>, <span class="text-gray-500">// WCAG 2.2 Target Size</span>
+};</code></pre>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 2. SENIOR CASE STUDIES (OUTCOME-FIRST) -->
+    <section id="work" class="mb-28">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div>
+          <p class="text-xs font-mono uppercase tracking-widest text-indigo-400 mb-2">01 / Selected Case Studies</p>
+          <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Outcome-Driven Product Design</h2>
+        </div>
+        <p class="text-gray-400 text-sm max-w-md mt-3 md:mt-0">
+          Every project is structured around user pain points, architectural trade-offs, and measurable business results.
+        </p>
+      </div>
+
+      <div class="space-y-10">
+
+        <!-- CASE STUDY 1 -->
+        <article class="bento-card rounded-3xl p-8 md:p-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-7 space-y-5">
+            <div class="flex flex-wrap items-center gap-2 text-xs font-mono">
+              <span class="px-3 py-1 rounded-full bg-indigo-500/15 text-indigo-300">Mobile Application</span>
+              <span class="px-3 py-1 rounded-full bg-white/5 text-gray-400">UX Research</span>
+              <span class="px-3 py-1 rounded-full bg-white/5 text-gray-400">React Native</span>
+            </div>
+
+            <h3 class="text-2xl md:text-3xl font-bold tracking-tight">
+              Streamlining Cross-Platform Mobile Onboarding &amp; Core Task Flows
+            </h3>
+
+            <!-- The Problem & Solution Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+              <div class="p-4 rounded-2xl bg-black/30 border border-white/5">
+                <div class="text-xs font-mono uppercase text-rose-400 mb-1">The Problem</div>
+                <p class="text-sm text-gray-300 leading-relaxed">
+                  Users experienced high drop-off during multi-step mobile forms due to cognitive overload, unvalidated inputs, and inconsistent navigation hierarchy.
+                </p>
+              </div>
+              <div class="p-4 rounded-2xl bg-black/30 border border-white/5">
+                <div class="text-xs font-mono uppercase text-emerald-400 mb-1">The UX Solution</div>
+                <p class="text-sm text-gray-300 leading-relaxed">
+                  Redesigned the information architecture into progressive disclosure steps, added inline real-time validation, and built a reusable mobile component library.
+                </p>
+              </div>
+            </div>
+
+            <!-- Impact Metrics Row -->
+            <div class="flex flex-wrap items-center gap-8 pt-2 border-t border-white/10">
+              <div>
+                <span class="block text-2xl font-extrabold text-white">+42%</span>
+                <span class="text-xs text-gray-400">Task Completion Rate</span>
+              </div>
+              <div>
+                <span class="block text-2xl font-extrabold text-white">-28%</span>
+                <span class="text-xs text-gray-400">Time-on-Task</span>
+              </div>
+              <div>
+                <span class="block text-2xl font-extrabold text-white">100%</span>
+                <span class="text-xs text-gray-400">Design-to-Code Parity</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Visual Wireframe/UI Preview Box -->
+          <div class="lg:col-span-5 bg-gradient-to-br from-indigo-950/60 via-[#12141C] to-black rounded-2xl p-6 border border-white/10">
+            <div class="text-xs font-mono text-gray-400 mb-4 flex justify-between">
+              <span>BEFORE vs. AFTER FLOW</span>
+              <span class="text-emerald-400">v2.4 Shipped</span>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+              <!-- Before Mock -->
+              <div class="p-4 rounded-xl bg-black/60 border border-rose-500/30 space-y-2.5">
+                <span class="text-[10px] font-mono text-rose-400 uppercase">Before (Cluttered)</span>
+                <div class="h-3 w-2/3 bg-white/10 rounded"></div>
+                <div class="h-6 w-full bg-white/5 rounded"></div>
+                <div class="h-6 w-full bg-white/5 rounded"></div>
+                <div class="h-6 w-full bg-white/5 rounded"></div>
+                <div class="h-6 w-full bg-white/5 rounded"></div>
+                <div class="h-7 w-full bg-rose-500/20 rounded mt-2"></div>
+                <p class="text-[11px] text-gray-400 pt-1">6 fields on 1 screen &bull; High drop-off</p>
+              </div>
+              <!-- After Mock -->
+              <div class="p-4 rounded-xl bg-black/60 border border-emerald-500/40 space-y-2.5">
+                <span class="text-[10px] font-mono text-emerald-400 uppercase">After (Progressive)</span>
+                <div class="h-1.5 w-full bg-emerald-500/30 rounded-full overflow-hidden">
+                  <div class="h-full w-2/3 bg-emerald-400"></div>
+                </div>
+                <div class="h-4 w-3/4 bg-white/20 rounded"></div>
+                <div class="h-10 w-full bg-white/10 rounded-lg border border-indigo-500/40"></div>
+                <div class="h-10 w-full bg-white/5 rounded-lg"></div>
+                <div class="h-8 w-full bg-indigo-600 rounded-lg mt-2"></div>
+                <p class="text-[11px] text-gray-300 pt-1">Guided 2-step flow &bull; Clear CTA</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- CASE STUDY 2 -->
+        <article id="process" class="bento-card rounded-3xl p-8 md:p-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-7 space-y-5">
+            <div class="flex flex-wrap items-center gap-2 text-xs font-mono">
+              <span class="px-3 py-1 rounded-full bg-cyan-500/15 text-cyan-300">Responsive Web App</span>
+              <span class="px-3 py-1 rounded-full bg-white/5 text-gray-400">Information Architecture</span>
+              <span class="px-3 py-1 rounded-full bg-white/5 text-gray-400">Design System</span>
+            </div>
+
+            <h3 class="text-2xl md:text-3xl font-bold tracking-tight">
+              Scalable Web Platform &amp; Data Dashboard Architecture
+            </h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+              <div class="p-4 rounded-2xl bg-black/30 border border-white/5">
+                <div class="text-xs font-mono uppercase text-rose-400 mb-1">The Problem</div>
+                <p class="text-sm text-gray-300 leading-relaxed">
+                  Key actions were buried 4 clicks deep inside unorganized menus, causing users to rely on manual support rather than self-serving.
+                </p>
+              </div>
+              <div class="p-4 rounded-2xl bg-black/30 border border-white/5">
+                <div class="text-xs font-mono uppercase text-emerald-400 mb-1">The UX Solution</div>
+                <p class="text-sm text-gray-300 leading-relaxed">
+                  Conducted card sorting and tree testing to flatten navigation, introducing a customizable status dashboard with role-based quick actions.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-8 pt-2 border-t border-white/10">
+              <div>
+                <span class="block text-2xl font-extrabold text-white">3 &rarr; 1</span>
+                <span class="text-xs text-gray-400">Clicks to Core Action</span>
+              </div>
+              <div>
+                <span class="block text-2xl font-extrabold text-white">WCAG AA</span>
+                <span class="text-xs text-gray-400">Contrast &amp; Keyboard Nav</span>
+              </div>
+              <div>
+                <span class="block text-2xl font-extrabold text-white">32+</span>
+                <span class="text-xs text-gray-400">Reusable Figma Components</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Architecture Visual Preview -->
+          <div class="lg:col-span-5 bg-gradient-to-br from-cyan-950/50 via-[#12141C] to-black rounded-2xl p-6 border border-white/10">
+            <div class="text-xs font-mono text-gray-400 mb-4 flex justify-between">
+              <span>USER JOURNEY &amp; IA RESTRUCTURE</span>
+              <span class="text-cyan-400">Systematized</span>
+            </div>
+            <div class="space-y-3">
+              <div class="p-3.5 rounded-xl bg-black/50 border border-white/5 flex items-center justify-between">
+                <span class="text-xs text-gray-300 font-medium">1. User Research &amp; Pain Point Mapping</span>
+                <span class="text-xs font-mono text-indigo-400">n=15 Users</span>
+              </div>
+              <div class="p-3.5 rounded-xl bg-black/50 border border-white/5 flex items-center justify-between">
+                <span class="text-xs text-gray-300 font-medium">2. Low-Fi Wireframes &amp; Flow Validation</span>
+                <span class="text-xs font-mono text-cyan-400">3 Iterations</span>
+              </div>
+              <div class="p-3.5 rounded-xl bg-black/50 border border-white/5 flex items-center justify-between">
+                <span class="text-xs text-gray-300 font-medium">3. Tokenized UI &amp; React Handoff</span>
+                <span class="text-xs font-mono text-emerald-400">Zero Drift</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- 3. DESIGN SYSTEMS & DEVELOPER HANDOFF PROOF -->
+    <section id="systems" class="mb-28">
+      <div class="mb-10">
+        <p class="text-xs font-mono uppercase tracking-widest text-indigo-400 mb-2">02 / Technical Edge</p>
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Design Systems &amp; Engineering Handoff</h2>
+        <p class="text-gray-400 text-sm mt-2 max-w-2xl">
+          Because I write React Native and frontend code, I design systems that engineers actually love to build—complete with state matrices, spacing scales, and accessibility compliance.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Component States -->
+        <div class="bento-card rounded-3xl p-7">
+          <div class="text-xs font-mono text-indigo-400 uppercase mb-2">Interactive States</div>
+          <h3 class="text-lg font-bold mb-4">Component State Matrix</h3>
+          <div class="space-y-3">
+            <button class="w-full py-2.5 px-4 rounded-lg bg-indigo-600 text-white text-xs font-semibold flex justify-between items-center">
+              <span>Default Primary</span>
+              <span class="font-mono text-[10px] opacity-75">#4F46E5</span>
+            </button>
+            <button class="w-full py-2.5 px-4 rounded-lg bg-indigo-500 ring-2 ring-indigo-300 text-white text-xs font-semibold flex justify-between items-center">
+              <span>Focus / Hover Ring</span>
+              <span class="font-mono text-[10px] opacity-75">2px Offset</span>
+            </button>
+            <button class="w-full py-2.5 px-4 rounded-lg bg-white/5 text-gray-500 border border-white/10 text-xs font-semibold flex justify-between items-center cursor-not-allowed">
+              <span>Disabled State</span>
+              <span class="font-mono text-[10px]">Opacity 40%</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Spacing & Tokens -->
+        <div class="bento-card rounded-3xl p-7">
+          <div class="text-xs font-mono text-cyan-400 uppercase mb-2">Spatial System</div>
+          <h3 class="text-lg font-bold mb-4">8pt Grid &amp; Spacing Tokens</h3>
+          <div class="space-y-3 font-mono text-xs">
+            <div class="flex items-center gap-3">
+              <span class="w-16 text-gray-400">space-xs</span>
+              <div class="h-3 w-4 bg-cyan-400/40 rounded"></div>
+              <span class="text-gray-300">4px (0.25rem)</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="w-16 text-gray-400">space-sm</span>
+              <div class="h-3 w-8 bg-cyan-400/60 rounded"></div>
+              <span class="text-gray-300">8px (0.5rem)</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="w-16 text-gray-400">space-md</span>
+              <div class="h-3 w-16 bg-cyan-400/80 rounded"></div>
+              <span class="text-gray-300">16px (1.0rem)</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="w-16 text-gray-400">space-lg</span>
+              <div class="h-3 w-24 bg-cyan-400 rounded"></div>
+              <span class="text-gray-300">24px (1.5rem)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accessibility -->
+        <div class="bento-card rounded-3xl p-7">
+          <div class="text-xs font-mono text-emerald-400 uppercase mb-2">Inclusive Design</div>
+          <h3 class="text-lg font-bold mb-4">WCAG 2.2 Accessibility</h3>
+          <ul class="space-y-3 text-sm text-gray-300">
+            <li class="flex items-center justify-between p-2.5 rounded-lg bg-black/40 border border-white/5">
+              <span>Text Contrast Ratio</span>
+              <span class="px-2 py-0.5 text-xs font-mono bg-emerald-500/20 text-emerald-300 rounded">AAA 7.4:1</span>
+            </li>
+            <li class="flex items-center justify-between p-2.5 rounded-lg bg-black/40 border border-white/5">
+              <span>Touch Target Minimum</span>
+              <span class="px-2 py-0.5 text-xs font-mono bg-emerald-500/20 text-emerald-300 rounded">48 &times; 48dp</span>
+            </li>
+            <li class="flex items-center justify-between p-2.5 rounded-lg bg-black/40 border border-white/5">
+              <span>Screen Reader Labels</span>
+              <span class="px-2 py-0.5 text-xs font-mono bg-emerald-500/20 text-emerald-300 rounded">aria-label</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. CONTACT & CTA FOOTER -->
+    <section id="contact" class="bento-card rounded-3xl p-10 md:p-14 text-center">
+      <p class="text-xs font-mono uppercase tracking-widest text-indigo-400 mb-3">03 / What's Next</p>
+      <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-4">
+        Ready to ship thoughtful UX &amp; clean code?
+      </h2>
+      <p class="text-gray-400 max-w-xl mx-auto mb-8">
+        Available for UI/UX Designer, Product Designer, and Hybrid UX/Frontend roles. Let’s discuss how I can help your team move faster from discovery to production.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <!-- Replace with your real email and LinkedIn -->
+        <a href="mailto:talahodeib@example.com" class="px-7 py-3.5 rounded-xl bg-white text-black font-semibold text-sm hover:bg-gray-200 transition">
+          Email Me Directly
+        </a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener" class="px-7 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white font-semibold text-sm hover:bg-white/10 transition">
+          LinkedIn Profile &nearr;
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-border py-8 text-center text-xs text-gray-500 font-mono">
+    Designed &amp; Engineered by Tala Hodeib &bull; Built with Semantic HTML &amp; Tailwind CSS
+  </footer>
+
+  <script>
+    (function () {
+      const dropdown = document.getElementById('projects-dropdown');
+      const btn = document.getElementById('projects-menu-btn');
+      const menu = document.getElementById('projects-menu');
+      const chevron = document.getElementById('projects-chevron');
+      const links = document.querySelectorAll('.projects-dropdown-link');
+
+      function setDropdownOpen(isOpen) {
+        if (!menu || !btn || !chevron) return;
+        menu.classList.toggle('hidden', !isOpen);
+        btn.setAttribute('aria-expanded', String(isOpen));
+        chevron.classList.toggle('rotate-180', isOpen);
+      }
+
+      if (btn && menu && dropdown) {
+        btn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          const isHidden = menu.classList.contains('hidden');
+          setDropdownOpen(isHidden);
+        });
+
+        links.forEach(function (link) {
+          link.addEventListener('click', function () {
+            setDropdownOpen(false);
+          });
+        });
+
+        document.addEventListener('click', function (e) {
+          if (!dropdown.contains(e.target)) {
+            setDropdownOpen(false);
+          }
+        });
+
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape') {
+            setDropdownOpen(false);
+          }
+        });
+      }
+
+      // Interactive state matrix demo buttons
+      document.querySelectorAll('button.bg-indigo-600, button.bg-indigo-500').forEach(function (demoBtn) {
+        demoBtn.addEventListener('click', function () {
+          demoBtn.classList.add('scale-[0.98]');
+          setTimeout(function () {
+            demoBtn.classList.remove('scale-[0.98]');
+          }, 150);
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
